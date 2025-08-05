@@ -1,4 +1,4 @@
-"use server"
+import "server-only";
 import { APIResponse } from "@/features/user/types/response.type";
 
 export async function fetchUser(): Promise<APIResponse> {
