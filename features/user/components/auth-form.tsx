@@ -37,7 +37,10 @@ export default function AuthForm() {
     const userData = await getUser.mutateAsync();
 
     console.log("acuall GET call res: ", userData);
-    setUser(userData.results[0]);
+
+    if (userData.data) {
+      setUser(userData.data.results[0]);
+    }
     router.push("/dashboard");
   };
 

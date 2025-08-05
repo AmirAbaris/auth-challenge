@@ -1,4 +1,10 @@
 export interface APIResponse {
+  data: DataResponse | null;
+  success: boolean;
+  message: string;
+}
+
+export interface DataResponse {
   results: Result[];
   info: Info;
 }
